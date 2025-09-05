@@ -17,12 +17,13 @@ public class TivoliRideTest01 {
         System.out.println("Hvor gammel er du?: ");
         int age = input.nextInt();
 
-        if(heigth<=170) {
-            System.out.println("Bliv højere tak");
-        }else if(age<=10){
-            System.out.println("Bliv ældre tak");
-        }else{
-            System.out.println("God tur");
+        System.out.println("Hvor meget vejer du?" );
+        double weigth = input.nextDouble();
+
+        //Create criteria
+        TivoliRide01 criteria = new TivoliRide01(heigth, age, weigth);
+
+        //print result
+        System.out.println(criteria.CanEnter());
     }
-}
 }

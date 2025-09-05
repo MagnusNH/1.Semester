@@ -1,20 +1,23 @@
 package Lesson04.TivoliRide;
 
 public class TivoliRide01 {
-   double height;
-   int age;
+    double heigth;
+    int age;
+    double weigth;
 
-   public TivoliRide01(double height, int age){
-       this.height= height;
-       this.age=age;
-   }
+    //Konstruktør til input af data
+    public TivoliRide01(double heigth, int age, double weigth) {
+        this.heigth = heigth;
+        this.age = age;
+        this.weigth = weigth;
+    }
 
-   //Method for entry rule
+    //Method for entry rule
     public String CanEnter() {
-        if(age>=10 && height>170){
+        if (age >= 10 && heigth >= 170 && weigth <= 60) {
             return "God tur";
         } else {
-            return "Bliv ældre";
+            return "Du kan ikke tage på denne tur";
         }
     }
 }
